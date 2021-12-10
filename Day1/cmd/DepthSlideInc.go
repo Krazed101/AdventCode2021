@@ -92,5 +92,4 @@ func main() {
 		prevTotal = curTotal
 	}
 	fmt.Printf("Number of Increases: %d\n", counter)
-
 }
