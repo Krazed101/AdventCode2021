@@ -18,6 +18,7 @@ func main() {
 	argsWithoutProg := os.Args[1:]
 	depth := 0
 	horizontal := 0
+	aim := 0
 	curNum := 0
 	dataSlice := make([]string, 0, 0)
 	filePath := argsWithoutProg[0]
@@ -43,10 +44,11 @@ func main() {
 		switch s[0] {
 		case "forward":
 			horizontal += curNum
+			depth += aim * curNum
 		case "down":
-			depth += curNum
+			aim += curNum
 		case "up":
-			depth -= curNum
+			aim -= curNum
 		}
 
 	}
